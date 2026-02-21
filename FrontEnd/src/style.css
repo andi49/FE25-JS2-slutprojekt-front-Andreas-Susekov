@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.twoBoxses{
+    align-items: center;
+    display: flex;
+    
+}
+
+.memberadd{
+     width: 450px;
+     height: 200px;
+     background-color: aqua;
+     text-align: center;
+}
+
+.assignmentadd{
+    width: 450px;
+     height: 200px;
+     background-color: red;
+     text-align: center;
+}
