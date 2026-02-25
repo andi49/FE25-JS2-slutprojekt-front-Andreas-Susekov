@@ -1,31 +1,8 @@
-const url = 'http://localhost:3013'
-import { addMember } from "./api";
 
-async function getMembers(){
-    const response = await fetch(url + '/members');
-    const users = await response.json();
-    const select = document.querySelector('#getAllMembers') as HTMLSelectElement
-    select.innerHTML = '<option value="">Choose member</option>';
-
-    users.forEach((user: { name: string }) => {
-    const option = document.createElement('option');
-    option.textContent = user.name;  
-    select.appendChild(option);
-  });
-  
-    console.log(users);
-}
-
-async function getAssignments() {
-      const response = await fetch(url + '/assignments');
-      const assignments = await response.json()
-     const display = document.querySelector('#test') as HTMLParagraphElement
-     
-     assignments.forEach((item: { title: string }) => {
-    display.textContent += item.title + " ";
-  })
-}
-
+import { addMember } from "./post/memberPost";
+import { addAssignment } from "./post/assignmentsPost";
+import { getMembers } from "./components/getMembers";
+import { getAssignments } from "./components/getAssignments";
 
 
 
@@ -43,11 +20,25 @@ form.addEventListener('submit', async (e) => {
 
   const result = await addMember(member);
   console.log(result);
+  await getMembers()
 });
 
 
+const formAssignment = document.querySelector('#assignmentForm') as HTMLFormElement
+
+formAssignment.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(formAssignment)
+
+    const assignment = {
+        title: formData.get('title') as string,
+        description: formData.get('description') as string,
+        category: formData.get('category') as string
+    }
+    const result = await addAssignment(assignment)
+    console.log(result);
+    await getAssignments()
+})
 
 
-getMembers();
-
-getAssignments()

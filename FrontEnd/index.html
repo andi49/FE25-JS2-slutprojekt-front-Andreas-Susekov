@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/style.css" />
+     <link rel="shortcut icon" href="src/img/favicon-32x32.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
+    <title>Scrum board</title>
   </head>
   <body>
     <header>
+
       <section class="twoBoxses">
         <div class="memberadd">
-          <h1>Add new member to the team</h1>
+
+          <h2>Add a new member to the team</h2>
           <form id="memberForm">
             <input type="text" placeholder="name" name="name" required />
 
@@ -21,24 +24,47 @@
               <option value="BUG-TESTER">BUG-TESTER</option>
               <option value="UX-DESIGNER">UX-DESIGNER</option>
             </select>
-
             <button type="submit">Send</button>
           </form>
         </div>
-        <h1 id="test"></h1>
+
         <div class="assignmentadd">
           <h2>Add a new task to the board</h2>
-          <input type="text" placeholder="title" required />
-          <textarea name="" id=""></textarea>
-          <select name="" id="">
-            <option value="">BACKEND</option>
-            <option value="">FRONTEND</option>
-            <option value="">BUG-TESTER</option>
-            <option value="">UX-DESIGNER</option>
+          <form id="assignmentForm">
+          <input type="text" placeholder="title" name="title" required />
+          <textarea name="description" id=""></textarea>
+          <select name="category" id="">
+          <option value="BACKEND">BACKEND</option>
+              <option value="FRONTEND">FRONTEND</option>
+              <option value="BUG-TESTER">BUG-TESTER</option>
+              <option value="UX-DESIGNER">UX-DESIGNER</option>
           </select>
+           <button type="submit">Send</button>
+          </form>
         </div>
       </section>
     </header>
+
+     <section class="board">
+      <!-- Todo -->
+       
+      <div class="div-todo" id="board-todo">
+        <h2>Uppgift</h2>
+       
+      </div>
+
+      <!-- In Progress -->
+      <div class="div-in-progress" id="column-in-progress">
+        <h2>Gående uppgift</h2>
+        <div class="task">Pågående uppgift 1</div>
+      </div>
+
+      <!-- Done -->
+      <div class="div-done">
+        <h2>Slutförd uppgift</h2>
+        <div class="task">Färdig uppgift 1</div>
+      </div>
+    </section>
     <section>
       <select name="" id="getAllMembers"></select>
     </section>
