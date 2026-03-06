@@ -1,10 +1,7 @@
-
 import { addMember } from "./post/memberPost";
 import { addAssignment } from "./post/assignmentsPost";
-import { getMembers } from "./components/getMembers";
-import { getAssignments } from "./components/getAssignments";
-
-
+import { getMembers } from "./api/getMembers";
+import { getAssignments } from "./components/renderAssignments";
 
 const form = document.querySelector('#memberForm') as HTMLFormElement;
 
@@ -42,3 +39,23 @@ formAssignment.addEventListener('submit', async (e) => {
 })
 
 
+
+
+
+// startConvo();
+
+
+// const AIform = document.querySelector('#aiForm') as HTMLFormElement;
+// AIform.addEventListener('submit', async (event) => {
+//     event.preventDefault();
+//     const inputText = AIform.querySelector('input')?.value;
+//     if (!inputText) return;
+
+//     conversation.push({user: inputText});
+
+//     const prompt = getPrompt(conversation);
+//     const reply = await getGeminiAnswer(prompt);
+//     if (reply) conversation.push({gemini: reply});
+
+//     renderConversation(conversation);
+// }); 

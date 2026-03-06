@@ -15,9 +15,9 @@
 
           <h2>Add a new member to the team</h2>
           <form id="memberForm">
-            <input type="text" placeholder="name" name="name" required />
+            <input type="text" placeholder="name" name="name"  id="nameInput" required/>
 
-            <select name="category" required>
+            <select name="category" id="categorySelect" required>
               <option value="">Choose category</option>
              <option value="FRONTEND">FRONTEND</option>
               <option value="BACKEND">BACKEND</option>
@@ -30,16 +30,20 @@
 
         <div class="assignmentadd">
           <h2>Add a new task to the board</h2>
+
           <form id="assignmentForm">
+
           <input type="text" placeholder="title" name="title" required />
-          <textarea name="description" id="" ></textarea>
-          <select name="category" id="" required>
+          <textarea name="description"></textarea>
+
+          <select name="category" id="categoryTwoSelect" required>
              <option value="">Choose category</option>
              <option value="FRONTEND">FRONTEND</option>
               <option value="BACKEND">BACKEND</option>
               <option value="BUG-TESTER">BUG-TESTER</option>
               <option value="UX-DESIGNER">UX-DESIGNER</option>
           </select>
+          
            <button type="submit">Send</button>
           </form>
         </div>
@@ -47,28 +51,29 @@
     </header>
 
      <section class="board">
+
       <!-- Todo -->
+       <div class="box">
+        <h2 class="">Task</h2>
       <div class="div-todo" id="board-todo">
-        <h2>Uppgift</h2>
-        <!-- uppgifter under -->
+        <div id="boardTodo"></div>
+      </div>
       </div>
 
       <!-- In Progress -->
-      <div class="div-in-progress" id="board-in-progress">
-        <h2>Gående uppgift</h2>
-        <div class="task">Pågående uppgift 1</div>
-      </div>
+       <div class="box">
+        <h2>Task in Progress</h2>
+      <div class="div-in-progress" id="board-in-progress"></div>
+     </div>
 
       <!-- Done -->
-      <div class="div-done">
-        <h2>Slutförd uppgift</h2>
-        <div class="task">Färdig uppgift 1</div>
+       <div class="box">
+          <h2>Task Done</h2>
+      <div class="div-done" id="board-is-done">
+
       </div>
-    </section>
+      </div>
 
-
-    <section>
-      <select name="" id="getAllMembers"></select>
     </section>
 
   </body>

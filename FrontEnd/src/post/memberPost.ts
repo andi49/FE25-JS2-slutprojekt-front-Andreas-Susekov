@@ -1,5 +1,5 @@
 const url = 'http://localhost:3013'
-import { getAssignments } from "../components/getAssignments";
+import { getAssignments } from "../components/renderAssignments";
 export const addMember = async (member: { name: string; category: string }) => {
     try {
         const response = await fetch(url + '/members', {

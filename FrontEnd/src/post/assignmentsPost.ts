@@ -10,6 +10,7 @@ export const addAssignment = async (assignment: { title: string, description:str
             body: JSON.stringify(assignment)
         }) 
        if(!response.ok) { throw new Error(`HTTP ERROR! status: ${response.status} `)}
+       
         const data = await response.json()
          
         return data

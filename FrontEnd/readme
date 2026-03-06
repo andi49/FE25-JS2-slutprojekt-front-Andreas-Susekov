@@ -1,0 +1,15 @@
+# Projekt
+
+## Installation
+
+Om `dist` krånglar och funktionerna inte fungerar korrekt behöver du installera **sortablejs**:
+
+```bash
+npm install sortablejs
+
+VIKTIGT VAR I RÄTT MAP!! DU SKA KÖRA TERMINALEN I FRONTEND MAPPEN OCH INTE FE25-JS2-SlUTPROJEKT......s
+npm run dev
+
+Kända problem
+SortableJS-funktionen är inte helt färdig ännu och fungerar därför inte till 100 % just nu.
+Viss sortering kan bete sig oväntat tills funktionen är färdig.
